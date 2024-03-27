@@ -150,9 +150,8 @@
       <self_collide>0</self_collide>
     </link>
 
-    <link name="cgo3_mount_link">
+    <!-- <link name="cgo3_mount_link">
       <inertial>
-        <!-- place holder -->
         <pose>-0.041 0 -0.162 0 0 0</pose>
         <mass>0.1</mass>
         <inertia>
@@ -206,7 +205,6 @@
 
     <link name="cgo3_vertical_arm_link">
       <inertial>
-        <!-- place holder -->
         <pose>-0.041 0 -0.162 0 0 0</pose>
         <mass>0.1</mass>
         <inertia>
@@ -238,9 +236,6 @@
       <child>cgo3_vertical_arm_link</child>
       <parent>cgo3_mount_link</parent>
       <pose>-0.026 0 -0.10 0 0 0</pose>
-      <!--
-      <controlIndex>6</controlIndex>
-      -->
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
@@ -258,7 +253,6 @@
         <ode>
           <implicit_spring_damper>1</implicit_spring_damper>
           <limit>
-            <!-- testing soft limits -->
             <cfm>0.1</cfm>
             <erp>0.2</erp>
           </limit>
@@ -268,7 +262,6 @@
 
     <link name="cgo3_horizontal_arm_link">
       <inertial>
-        <!-- place holder -->
         <pose>-0.041 0 -0.081 0 0 0</pose>
         <mass>0.1</mass>
         <inertia>
@@ -300,9 +293,6 @@
       <child>cgo3_horizontal_arm_link</child>
       <parent>cgo3_vertical_arm_link</parent>
       <pose>0.026 0 -0.162 0 0 0</pose>
-      <!--
-      <controlIndex>7</controlIndex>
-      -->
       <axis>
         <xyz>-1 0 0</xyz>
         <limit>
@@ -320,13 +310,12 @@
         <ode>
           <implicit_spring_damper>1</implicit_spring_damper>
           <limit>
-            <!-- testing soft limits -->
             <cfm>0.1</cfm>
             <erp>0.2</erp>
           </limit>
         </ode>
       </physics>
-    </joint>
+    </joint> -->
 
     <!--link name="cgo3_camera_link">
       <inertial>
