@@ -12,7 +12,7 @@
     <include>
       <uri>model://asphalt_plane</uri>
     </include>
-    <include>
+    <!-- <include>
       <uri>model://WindTURBINE</uri>
     </include>
     <include>
@@ -23,7 +23,7 @@
     </include>
     <include>
       <uri>model://bridge_v1</uri>
-    </include>
+    </include> -->
     <physics name='default_physics' default='0' type='ode'>
       <gravity>0 0 -9.8066</gravity>
       <ode>
