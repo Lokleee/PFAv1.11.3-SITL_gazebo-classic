@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <sdf version='1.7'>
   <model name='Piperack-1'>
-    <pose>-30 -30 0 0 0 0</pose>
+    <pose>-15 -15 0 0 0 0</pose>
     <link name='base_link'>
       <inertial>
         <pose>0.036692 6.65411 -0 0 -0 0</pose>

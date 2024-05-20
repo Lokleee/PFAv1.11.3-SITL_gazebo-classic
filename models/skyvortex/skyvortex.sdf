@@ -199,12 +199,21 @@
         </inertia> -->
 
       </inertial>
-      <collision name='operator_1_collision'>
-        <pose>0.26 -0.01 0.14 0 -0 0</pose>
+      <collision name='operator_1_collision_base'>
+        <pose>0 0 -0.02 0 -0 0</pose>
         <geometry>
           <box>
-            <size>1.17 0.08 0.81</size>
+            <size>0.65168 0.079868 0.520593</size>
           </box>
+        </geometry>
+      </collision>
+      <collision name='operator_1_collision_link'>
+        <pose>0.4 0 0.235 0.03 1.06 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.04</radius>
+            <length>1</length>
+          </cylinder>
         </geometry>
       </collision>
       <visual name='operator_1_visual'>
@@ -837,7 +846,7 @@
 
       <hil_state_level>false</hil_state_level>
 
-      <enable_lockstep>1</enable_lockstep>
+      <enable_lockstep>0</enable_lockstep>
 
       <use_tcp>true</use_tcp>
 
@@ -943,6 +952,12 @@
       <accelerometerRandomWalk>0.006</accelerometerRandomWalk>
       <accelerometerBiasCorrelationTime>300.0</accelerometerBiasCorrelationTime>
       <accelerometerTurnOnBiasSigma>0.196</accelerometerTurnOnBiasSigma>
+    </plugin>
+    <plugin name="position_controller" filename="libposition_controller.so">
+      <jointname>operator_1_joint</jointname>
+      <p_gain>0.1</p_gain>
+      <i_gain>0.00</i_gain>
+      <d_gain>0.00</d_gain>
     </plugin>
   </model>
 </sdf>

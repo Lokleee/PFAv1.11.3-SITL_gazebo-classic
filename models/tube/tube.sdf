@@ -4,8 +4,8 @@
     <pose>-15 15 0 0 0 0</pose>
     <link name='base_link'>
       <inertial>
-        <pose>0 -0 -0.073449 0 -0 0</pose>
-        <mass>2.47</mass>
+        <pose>0 -0 0 0 -0 0</pose>
+        <mass>24.7</mass>
         <inertia>
           <ixx>0.29001</ixx>
           <ixy>0</ixy>
@@ -19,7 +19,7 @@
         <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
-            <scale>10 10 10</scale>
+            <scale>1 1 1</scale>
             <uri>model://tube/meshes/base_link.STL</uri>
           </mesh>
         </geometry>
@@ -28,7 +28,7 @@
         <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
-            <scale>10 10 10</scale>
+            <scale>1 1 1</scale>
             <uri>model://tube/meshes/base_link.STL</uri>
           </mesh>
         </geometry>
