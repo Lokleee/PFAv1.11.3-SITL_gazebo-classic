@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <sdf version='1.7'>
   <model name='tube'>
+    <static>true</static>
     <pose>-15 15 0 0 0 0</pose>
     <link name='base_link'>
       <inertial>

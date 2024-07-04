@@ -1,7 +1,8 @@
 <?xml version="1.0" ?>
 <sdf version='1.7'>
   <model name='Piperack-1'>
-    <pose>-15 -15 0 0 0 0</pose>
+    <static>true</static>
+    <pose>5 30 0 0 0 0</pose>
     <link name='base_link'>
       <inertial>
         <pose>0.036692 6.65411 -0 0 -0 0</pose>
@@ -32,6 +33,10 @@
             <uri>model://Piperack-1/meshes/base_link.STL</uri>
           </mesh>
         </geometry>
+        <material>
+          <ambient>0.5451 0.2706 0.0745 1</ambient>
+          <diffuse>0.5451 0.2706 0.0745 1</diffuse>
+        </material>
       </visual>
     </link>
   </model>

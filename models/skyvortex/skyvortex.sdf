@@ -160,7 +160,7 @@
     </link>
 
 
-    <joint name='operator_1_joint' type='fixed'>
+    <joint name='operator_1_joint' type='revolute'>
       <pose relative_to='base_link'>0.000871 0.000172 0.028455 0 -0 0</pose>
       <parent>base_link</parent>
       <child>operator_1_Link</child>
@@ -187,7 +187,7 @@
       <pose relative_to='operator_1_joint'>0 0 0 0 -0 0</pose>
       <inertial>
         <pose>-0.039322 0.00272 -0.023277 0 -0 0</pose>
-        <mass>1.5594</mass>
+        <mass>0.000001</mass>
 
         <!-- <inertia>
           <ixx>0.02928</ixx>
@@ -695,6 +695,22 @@
       <parent>base_link</parent>
     </joint>
 
+    <!-- <include>
+      <uri>model://depth_camera</uri>
+      <pose>0.1 0 0 0 0 0</pose>
+    </include>
+    <joint name="depth_camera_joint" type="fixed">
+      <child>depth_camera::link</child>
+      <parent>operator_1_Link</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <upper>0</upper>
+          <lower>0</lower>
+        </limit>
+      </axis>
+    </joint> -->
+
     <plugin name='rosbag' filename='libgazebo_multirotor_base_plugin.so'>
       <robotNamespace></robotNamespace>
       <linkName>base_link</linkName>
@@ -955,9 +971,9 @@
     </plugin>
     <plugin name="position_controller" filename="libposition_controller.so">
       <jointname>operator_1_joint</jointname>
-      <p_gain>0.1</p_gain>
-      <i_gain>0.00</i_gain>
-      <d_gain>0.00</d_gain>
+      <p_gain>1</p_gain>
+      <i_gain>0.5</i_gain>
+      <d_gain>0.5</d_gain>
     </plugin>
   </model>
 </sdf>
