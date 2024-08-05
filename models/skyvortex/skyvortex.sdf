@@ -160,7 +160,7 @@
     </link>
 
 
-    <joint name='operator_1_joint' type='fixed'>
+    <joint name='operator_1_joint' type='revolute'>
       <pose relative_to='base_link'>0.000871 0.000172 0.028455 0 -0 0</pose>
       <parent>base_link</parent>
       <child>operator_1_Link</child>
@@ -953,5 +953,13 @@
       <accelerometerBiasCorrelationTime>300.0</accelerometerBiasCorrelationTime>
       <accelerometerTurnOnBiasSigma>0.196</accelerometerTurnOnBiasSigma>
     </plugin>
+
+    <plugin name='position_controller_plugin' filename='libposition_controller.so'>
+      <joint_name>operator_1_joint</joint_name>
+      <p_gain>4.0</p_gain>
+      <i_gain>0.0</i_gain>
+      <d_gain>0.0</d_gain>
+    </plugin>
+
   </model>
 </sdf>
