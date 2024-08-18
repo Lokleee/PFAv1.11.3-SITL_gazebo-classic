@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <sdf version='1.7'>
   <model name='WindTURBINE'>
-    <pose>15 15 0 0 0 0</pose>
+    <pose>10 10 0 0 0 0</pose>
     <link name='base_link'>
       <inertial>
         <pose>0.36397 -1e-06 34.227 0 -0 0</pose>
@@ -32,9 +32,13 @@
             <uri>model://WindTURBINE/meshes/base_link.STL</uri>
           </mesh>
         </geometry>
+        <material>
+          <ambient>0.1176 0.5647 1 1</ambient>
+          <diffuse>0.1176 0.5647 1 1</diffuse>
+        </material>
       </visual>
     </link>
-    <joint name='roter_joint' type='revolute'>
+    <joint name='roter_joint' type='fixed'>
       <pose relative_to='base_link'>-6.5731 0 71.01 -3.1375 0.37593 1.5819</pose>
       <parent>base_link</parent>
       <child>roter</child>
@@ -83,6 +87,10 @@
             <uri>model://WindTURBINE/meshes/roter.STL</uri>
           </mesh>
         </geometry>
+        <material>
+          <ambient>0.6784 0.8471 0.902 1</ambient>
+          <diffuse>0.6784 0.8471 0.902 1</diffuse>
+        </material>
       </visual>
     </link>
   </model>
