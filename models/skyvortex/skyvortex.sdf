@@ -5,9 +5,10 @@
     <link name='base_link'>
       <pose>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>-0.000689 -0.002137 0.004638 0 -0 0</pose>
+        <!-- <pose>-0.000689 -0.002137 0.004638 0 -0 0</pose> -->
+        <pose>0 -0.002137 0.004638 0 -0 0</pose>
+        <!-- <mass>7.608516</mass> -->
         <mass>4.1077</mass>
-
         <inertia>
           <ixx>0.1560383</ixx>
           <ixy>0</ixy>
@@ -160,7 +161,7 @@
     </link>
 
 
-    <joint name='operator_1_joint' type='revolute'>
+    <joint name='operator_1_joint' type='fixed'>
       <pose relative_to='base_link'>0.000871 0.000172 0.028455 0 -0 0</pose>
       <parent>base_link</parent>
       <child>operator_1_Link</child>
@@ -355,7 +356,7 @@
         </geometry>
         <material>
           <script>
-            <name>Gazebo/DarkGrey</name>
+            <name>Gazebo/Yellow</name>
             <uri>file://media/materials/scripts/gazebo.material</uri>
           </script>
         </material>
@@ -493,7 +494,7 @@
         </geometry>
         <material>
           <script>
-            <name>Gazebo/DarkGrey</name>
+            <name>Gazebo/Yellow</name>
             <uri>file://media/materials/scripts/gazebo.material</uri>
           </script>
         </material>
@@ -631,7 +632,7 @@
         </geometry>
         <material>
           <script>
-            <name>Gazebo/DarkGrey</name>
+            <name>Gazebo/Yellow</name>
             <uri>file://media/materials/scripts/gazebo.material</uri>
           </script>
         </material>

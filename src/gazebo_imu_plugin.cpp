@@ -206,14 +206,14 @@ void GazeboImuPlugin::addNoise(Eigen::Vector3d* linear_acceleration,
   // Compute state-transition.
   double phi_g_d = exp(-1.0 / tau_g * dt);
   // Simulate gyroscope noise processes and add them to the true angular rate.
-  for (int i = 0; i < 3; ++i) {
-    gyroscope_bias_[i] = phi_g_d * gyroscope_bias_[i] +
-        sigma_b_g_d * standard_normal_distribution_(random_generator_);
-    (*angular_velocity)[i] = (*angular_velocity)[i] +
-        gyroscope_bias_[i] +
-        sigma_g_d * standard_normal_distribution_(random_generator_) +
-        gyroscope_turn_on_bias_[i];
-  }
+  // for (int i = 0; i < 3; ++i) {
+  //   gyroscope_bias_[i] = phi_g_d * gyroscope_bias_[i] +
+  //       sigma_b_g_d * standard_normal_distribution_(random_generator_);
+  //   (*angular_velocity)[i] = (*angular_velocity)[i] +
+  //       gyroscope_bias_[i] +
+  //       sigma_g_d * standard_normal_distribution_(random_generator_) +
+  //       gyroscope_turn_on_bias_[i];
+  // }
 
   // Accelerometer
   double tau_a = imu_parameters_.accelerometer_bias_correlation_time;
@@ -229,14 +229,14 @@ void GazeboImuPlugin::addNoise(Eigen::Vector3d* linear_acceleration,
   double phi_a_d = exp(-1.0 / tau_a * dt);
   // Simulate accelerometer noise processes and add them to the true linear
   // acceleration.
-  for (int i = 0; i < 3; ++i) {
-    accelerometer_bias_[i] = phi_a_d * accelerometer_bias_[i] +
-        sigma_b_a_d * standard_normal_distribution_(random_generator_);
-    (*linear_acceleration)[i] = (*linear_acceleration)[i] +
-        accelerometer_bias_[i] +
-        sigma_a_d * standard_normal_distribution_(random_generator_) +
-        accelerometer_turn_on_bias_[i];
-  }
+  // for (int i = 0; i < 3; ++i) {
+  //   accelerometer_bias_[i] = phi_a_d * accelerometer_bias_[i] +
+  //       sigma_b_a_d * standard_normal_distribution_(random_generator_);
+  //   (*linear_acceleration)[i] = (*linear_acceleration)[i] +
+  //       accelerometer_bias_[i] +
+  //       sigma_a_d * standard_normal_distribution_(random_generator_) +
+  //       accelerometer_turn_on_bias_[i];
+  // }
 
 }
 
